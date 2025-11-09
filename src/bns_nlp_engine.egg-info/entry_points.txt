@@ -1,0 +1,18 @@
+[bnsnlp.classify]
+turkish = bnsnlp.classify.intent:TurkishClassifier
+
+[bnsnlp.embed]
+cohere = bnsnlp.embed.cohere:CohereEmbedder
+huggingface = bnsnlp.embed.huggingface:HuggingFaceEmbedder
+openai = bnsnlp.embed.openai:OpenAIEmbedder
+
+[bnsnlp.preprocess]
+turkish = bnsnlp.preprocess.normalizer:TurkishPreprocessor
+
+[bnsnlp.search]
+faiss = bnsnlp.search.faiss:FAISSSearch
+pinecone = bnsnlp.search.pinecone:PineconeSearch
+qdrant = bnsnlp.search.qdrant:QdrantSearch
+
+[console_scripts]
+bnsnlp = bnsnlp.cli.main:app
