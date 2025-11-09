@@ -1272,7 +1272,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
 authors = [
-    {name = "Your Name", email = "your.email@example.com"}
+    {name = "Tunti35", email = "tunay@bones.com.tr"}
 ]
 keywords = ["nlp", "turkish", "natural-language-processing", "embeddings", "semantic-search"]
 classifiers = [

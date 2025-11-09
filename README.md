@@ -488,7 +488,7 @@ Katkılarınızı bekliyoruz! Lütfen şu adımları takip edin:
 
 ## 📖 Dokümantasyon
 
-Detaylı dokümantasyon için: [https://yourusername.github.io/bns-nlp-engine](https://yourusername.github.io/bns-nlp-engine)
+Detaylı dokümantasyon için: Hiç bir yer yok..
 
 ## 🔐 Güvenlik ve Gizlilik
 
@@ -512,8 +512,8 @@ Bu proje MIT Lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICE
 
 ## 📞 İletişim
 
-- GitHub Issues: [https://github.com/yourusername/bns-nlp-engine/issues](https://github.com/yourusername/bns-nlp-engine/issues)
-- Email: your.email@example.com
+- GitHub Issues: [https://github.com/Tuntii/bns-nlp-engine/issues](https://github.com/yourusername/bns-nlp-engine/issues)
+- Email: tunay@bones.com.tr
 
 ## 🗺️ Roadmap
 

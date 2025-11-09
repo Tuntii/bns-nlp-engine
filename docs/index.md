@@ -86,8 +86,6 @@ pip install bns-nlp-engine[openai,qdrant]
 
 ## Topluluk ve Destek
 
-- **GitHub**: [Issues](https://github.com/yourusername/bns-nlp-engine/issues) ve [Discussions](https://github.com/yourusername/bns-nlp-engine/discussions)
-- **Email**: your.email@example.com
 
 ## Lisans
 

@@ -33,10 +33,3 @@ async def main():
 asyncio.run(main())
 ```
 
-## Yardım
-
-Sorularınız için:
-
-- [GitHub Discussions](https://github.com/yourusername/bns-nlp-engine/discussions)
-- [GitHub Issues](https://github.com/yourusername/bns-nlp-engine/issues)
-- Email: your.email@example.com

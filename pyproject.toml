@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
 authors = [
-    {name = "BNS Team", email = "team@bns.com"}
+    {name = "Tunay", email = "tunay@bones.com.tr"}
 ]
 keywords = ["nlp", "turkish", "natural-language-processing", "embeddings", "semantic-search"]
 classifiers = [
