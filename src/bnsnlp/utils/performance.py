@@ -5,7 +5,7 @@ import hashlib
 import multiprocessing
 from collections import OrderedDict
 from concurrent.futures import ProcessPoolExecutor
-from typing import Any, AsyncIterator, Callable, Dict, List, Optional, TypeVar
+from typing import Any, AsyncIterator, Callable, List, Optional, TypeVar
 
 T = TypeVar("T")
 R = TypeVar("R")
@@ -141,9 +141,7 @@ class MultiprocessingExecutor:
         """
         loop = asyncio.get_event_loop()
         # Use executor.map instead of lambda to avoid pickling issues
-        results = await loop.run_in_executor(
-            None, lambda: list(self.executor.map(func, items))
-        )
+        results = await loop.run_in_executor(None, lambda: list(self.executor.map(func, items)))
         return results
 
     async def map(self, func: Callable[[T], R], items: List[T]) -> List[R]:
@@ -158,9 +156,7 @@ class MultiprocessingExecutor:
         """
         loop = asyncio.get_event_loop()
         # Use executor.map directly
-        results = await loop.run_in_executor(
-            None, lambda: list(self.executor.map(func, items))
-        )
+        results = await loop.run_in_executor(None, lambda: list(self.executor.map(func, items)))
         return results
 
     def shutdown(self, wait: bool = True):

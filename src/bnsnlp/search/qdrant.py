@@ -10,8 +10,8 @@ from bnsnlp.search.base import BaseSearch, SearchResponse, SearchResult
 
 try:
     from qdrant_client import AsyncQdrantClient
-    from qdrant_client.models import Distance, PointStruct, VectorParams, Filter
-    
+    from qdrant_client.models import Distance, Filter, PointStruct, VectorParams
+
     QDRANT_AVAILABLE = True
 except ImportError:
     QDRANT_AVAILABLE = False
@@ -110,13 +110,21 @@ class QdrantSearch(BaseSearch):
         if not texts or not embeddings or not ids:
             raise AdapterError(
                 "texts, embeddings, and ids must be non-empty lists",
-                context={"texts_len": len(texts), "embeddings_len": len(embeddings), "ids_len": len(ids)},
+                context={
+                    "texts_len": len(texts),
+                    "embeddings_len": len(embeddings),
+                    "ids_len": len(ids),
+                },
             )
 
         if not (len(texts) == len(embeddings) == len(ids)):
             raise AdapterError(
                 "texts, embeddings, and ids must have the same length",
-                context={"texts_len": len(texts), "embeddings_len": len(embeddings), "ids_len": len(ids)},
+                context={
+                    "texts_len": len(texts),
+                    "embeddings_len": len(embeddings),
+                    "ids_len": len(ids),
+                },
             )
 
         # Ensure collection exists
@@ -166,7 +174,7 @@ class QdrantSearch(BaseSearch):
                         },
                     )
                 # Wait before retry with exponential backoff
-                await self._sleep(retry_delay * (2 ** attempt))
+                await self._sleep(retry_delay * (2**attempt))
 
     async def search(
         self,
@@ -258,7 +266,7 @@ class QdrantSearch(BaseSearch):
                         },
                     )
                 # Wait before retry with exponential backoff
-                await self._sleep(retry_delay * (2 ** attempt))
+                await self._sleep(retry_delay * (2**attempt))
 
         # This should never be reached due to the raise in the loop
         raise AdapterError("Unexpected error in search operation")
@@ -270,4 +278,5 @@ class QdrantSearch(BaseSearch):
             seconds: Number of seconds to sleep
         """
         import asyncio
+
         await asyncio.sleep(seconds)

@@ -7,6 +7,9 @@ including preprocessing, embeddings, semantic search, and classification.
 
 from bnsnlp.__version__ import __version__
 
+# Classification
+from bnsnlp.classify import BaseClassifier, ClassifyResult, Entity, TurkishClassifier
+
 # Core components
 from bnsnlp.core import (
     AdapterError,
@@ -35,6 +38,9 @@ from bnsnlp.core import (
     ValidationError,
 )
 
+# Embedding
+from bnsnlp.embed import BaseEmbedder, EmbedResult
+
 # Preprocessing
 from bnsnlp.preprocess import (
     BasePreprocessor,
@@ -48,14 +54,8 @@ from bnsnlp.preprocess import (
     load_turkish_stopwords,
 )
 
-# Embedding
-from bnsnlp.embed import BaseEmbedder, EmbedResult
-
 # Search
 from bnsnlp.search import BaseSearch, SearchResponse, SearchResult
-
-# Classification
-from bnsnlp.classify import BaseClassifier, ClassifyResult, Entity, TurkishClassifier
 
 # Utilities
 from bnsnlp.utils import (

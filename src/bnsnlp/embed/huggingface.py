@@ -110,9 +110,7 @@ class HuggingFaceEmbedder(BaseEmbedder):
         loop = asyncio.get_event_loop()
 
         try:
-            embeddings_array = await loop.run_in_executor(
-                None, self._encode_texts, texts
-            )
+            embeddings_array = await loop.run_in_executor(None, self._encode_texts, texts)
 
             # Convert to list of lists
             embeddings = embeddings_array.tolist()

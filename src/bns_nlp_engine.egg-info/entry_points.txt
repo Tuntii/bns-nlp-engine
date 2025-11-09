@@ -1,5 +1,5 @@
 [bnsnlp.classify]
-turkish = bnsnlp.classify.intent:TurkishClassifier
+turkish = bnsnlp.classify.turkish:TurkishClassifier
 
 [bnsnlp.embed]
 cohere = bnsnlp.embed.cohere:CohereEmbedder
@@ -7,7 +7,7 @@ huggingface = bnsnlp.embed.huggingface:HuggingFaceEmbedder
 openai = bnsnlp.embed.openai:OpenAIEmbedder
 
 [bnsnlp.preprocess]
-turkish = bnsnlp.preprocess.normalizer:TurkishPreprocessor
+turkish = bnsnlp.preprocess.turkish:TurkishPreprocessor
 
 [bnsnlp.search]
 faiss = bnsnlp.search.faiss:FAISSSearch

@@ -194,7 +194,6 @@ class PineconeSearch(BaseSearch):
                         },
                     )
                 # Wait before retry with exponential backoff
-                import asyncio
                 import time as time_module
 
                 time_module.sleep(retry_delay * (2**attempt))

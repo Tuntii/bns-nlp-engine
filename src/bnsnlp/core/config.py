@@ -69,14 +69,10 @@ class EmbedConfig(BaseModel):
     """Embedding configuration."""
 
     provider: str = Field(default="openai", description="Embedding provider")
-    model: str = Field(
-        default="text-embedding-3-small", description="Model name for embeddings"
-    )
+    model: str = Field(default="text-embedding-3-small", description="Model name for embeddings")
     batch_size: int = Field(default=16, description="Batch size for embedding", gt=0)
     use_gpu: bool = Field(default=True, description="Use GPU if available")
-    api_key: Optional[str] = Field(
-        default=None, description="API key for embedding provider"
-    )
+    api_key: Optional[str] = Field(default=None, description="API key for embedding provider")
 
     @field_validator("batch_size")
     @classmethod
@@ -92,9 +88,7 @@ class EmbedConfig(BaseModel):
         """Validate embedding provider."""
         valid_providers = ["openai", "cohere", "huggingface"]
         if v not in valid_providers:
-            raise ValueError(
-                f"Invalid embedding provider: {v}. Must be one of {valid_providers}"
-            )
+            raise ValueError(f"Invalid embedding provider: {v}. Must be one of {valid_providers}")
         return v
 
 
@@ -129,9 +123,7 @@ class SearchConfig(BaseModel):
         """Validate search provider."""
         valid_providers = ["faiss", "qdrant", "pinecone"]
         if v not in valid_providers:
-            raise ValueError(
-                f"Invalid search provider: {v}. Must be one of {valid_providers}"
-            )
+            raise ValueError(f"Invalid search provider: {v}. Must be one of {valid_providers}")
         return v
 
 

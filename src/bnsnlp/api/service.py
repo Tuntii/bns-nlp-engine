@@ -40,7 +40,9 @@ class EmbedRequest(BaseModel):
     """Request model for text embedding."""
 
     texts: List[str] = Field(..., description="List of texts to embed")
-    provider: str = Field(default="openai", description="Embedding provider (openai, cohere, huggingface)")
+    provider: str = Field(
+        default="openai", description="Embedding provider (openai, cohere, huggingface)"
+    )
     model: Optional[str] = Field(default=None, description="Model name (provider-specific)")
 
     class Config:
@@ -83,6 +85,7 @@ class ClassifyRequest(BaseModel):
                 "text": "Yarın saat 14:00'te toplantı var mı?",
             }
         }
+
 
 # Create FastAPI application
 app = FastAPI(
@@ -164,9 +167,9 @@ async def embed_endpoint(request: EmbedRequest):
     """
     from fastapi import HTTPException
 
-    from bnsnlp.embed.openai import OpenAIEmbedder
     from bnsnlp.embed.cohere import CohereEmbedder
     from bnsnlp.embed.huggingface import HuggingFaceEmbedder
+    from bnsnlp.embed.openai import OpenAIEmbedder
 
     try:
         # Select embedder based on provider
@@ -220,8 +223,8 @@ async def search_endpoint(request: SearchRequest):
 
     from bnsnlp.embed.openai import OpenAIEmbedder
     from bnsnlp.search.faiss import FAISSSearch
-    from bnsnlp.search.qdrant import QdrantSearch
     from bnsnlp.search.pinecone import PineconeSearch
+    from bnsnlp.search.qdrant import QdrantSearch
 
     try:
         # First, embed the query
