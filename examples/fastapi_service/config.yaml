@@ -1,0 +1,30 @@
+# bns-nlp-engine Configuration
+
+logging:
+  level: INFO
+  format: json
+  output: stdout
+
+telemetry:
+  enabled: false
+
+preprocess:
+  lowercase: true
+  remove_punctuation: true
+  remove_stopwords: true
+  lemmatize: true
+  batch_size: 32
+
+embed:
+  provider: openai
+  model: text-embedding-3-small
+  batch_size: 16
+  use_gpu: false
+
+search:
+  provider: faiss
+  top_k: 10
+  similarity_threshold: 0.7
+
+classify:
+  use_gpu: false

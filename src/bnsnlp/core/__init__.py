@@ -21,6 +21,8 @@ from bnsnlp.core.exceptions import (
     ProcessingError,
     ValidationError,
 )
+from bnsnlp.core.pipeline import Pipeline, PipelineStep
+from bnsnlp.core.registry import PluginRegistry
 from bnsnlp.core.types import (
     ClassifierInterface,
     ConfigDict,
@@ -58,4 +60,9 @@ __all__ = [
     "PreprocessConfig",
     "EmbedConfig",
     "SearchConfig",
+    # Registry
+    "PluginRegistry",
+    # Pipeline
+    "Pipeline",
+    "PipelineStep",
 ]

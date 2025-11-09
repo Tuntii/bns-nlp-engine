@@ -1,0 +1,250 @@
+site_name: bns-nlp-engine Documentation
+site_description: Türkçe NLP için modüler ve genişletilebilir Python kütüphanesi
+site_author: BNS Team
+site_url: https://yourusername.github.io/bns-nlp-engine
+repo_url: https://github.com/yourusername/bns-nlp-engine
+repo_name: bns-nlp-engine
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: tr
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Karanlık moda geç
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Aydınlık moda geç
+  
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - navigation.tracking
+    - navigation.indexes
+    - toc.follow
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+  
+  icon:
+    repo: fontawesome/brands/github
+    logo: material/library
+
+plugins:
+  - search:
+      lang:
+        - tr
+        - en
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
+            show_source: true
+            show_root_heading: true
+            show_root_full_path: false
+            show_category_heading: true
+            show_if_no_docstring: false
+            show_signature_annotations: true
+            separate_signature: true
+            line_length: 100
+            merge_init_into_class: true
+            docstring_section_style: table
+  - autorefs
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+
+markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra:
+  version:
+    provider: mike
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yourusername/bns-nlp-engine
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/bns-nlp-engine/
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Ana Sayfa: index.md
+  
+  - Başlangıç:
+    - getting-started/index.md
+    - Kurulum: getting-started/installation.md
+    - Hızlı Başlangıç: getting-started/quickstart.md
+    - Yapılandırma: getting-started/configuration.md
+    - Temel Kavramlar: getting-started/concepts.md
+  
+  - Kullanım Kılavuzu:
+    - guide/index.md
+    - Metin Ön İşleme: guide/preprocessing.md
+    - Embedding Oluşturma: guide/embeddings.md
+    - Semantik Arama: guide/search.md
+    - Sınıflandırma: guide/classification.md
+    - Pipeline Kullanımı: guide/pipeline.md
+    - Batch İşleme: guide/batch-processing.md
+    - Streaming: guide/streaming.md
+    - Hata Yönetimi: guide/error-handling.md
+  
+  - API Referansı:
+    - api/index.md
+    - Core:
+      - api/core/pipeline.md
+      - api/core/registry.md
+      - api/core/config.md
+      - api/core/exceptions.md
+      - api/core/types.md
+    - Preprocess:
+      - api/preprocess/base.md
+      - api/preprocess/turkish.md
+      - api/preprocess/normalizer.md
+      - api/preprocess/tokenizer.md
+      - api/preprocess/lemmatizer.md
+      - api/preprocess/stopwords.md
+    - Embed:
+      - api/embed/base.md
+      - api/embed/openai.md
+      - api/embed/cohere.md
+      - api/embed/huggingface.md
+    - Search:
+      - api/search/base.md
+      - api/search/qdrant.md
+      - api/search/pinecone.md
+      - api/search/faiss.md
+    - Classify:
+      - api/classify/base.md
+      - api/classify/turkish.md
+    - Utils:
+      - api/utils/logging.md
+      - api/utils/performance.md
+      - api/utils/security.md
+      - api/utils/telemetry.md
+  
+  - Plugin Geliştirme:
+    - plugins/index.md
+    - Plugin Oluşturma: plugins/creating.md
+    - Plugin API: plugins/api.md
+    - Preprocessor Plugin: plugins/preprocessor.md
+    - Embedder Plugin: plugins/embedder.md
+    - Search Plugin: plugins/search.md
+    - Classifier Plugin: plugins/classifier.md
+    - Örnekler: plugins/examples.md
+    - En İyi Pratikler: plugins/best-practices.md
+  
+  - CLI Referansı:
+    - cli/index.md
+    - Preprocess Komutu: cli/preprocess.md
+    - Embed Komutu: cli/embed.md
+    - Search Komutu: cli/search.md
+    - Classify Komutu: cli/classify.md
+  
+  - API Servisi:
+    - api-service/index.md
+    - Kurulum: api-service/setup.md
+    - Endpoints: api-service/endpoints.md
+    - Authentication: api-service/authentication.md
+    - Rate Limiting: api-service/rate-limiting.md
+    - Deployment: api-service/deployment.md
+    - Docker: api-service/docker.md
+  
+  - Örnekler:
+    - examples/index.md
+    - Jupyter Notebooks: examples/notebooks.md
+    - FastAPI Servisi: examples/fastapi.md
+    - Batch İşleme: examples/batch-processing.md
+    - Streaming Örneği: examples/streaming.md
+    - Custom Plugin: examples/custom-plugin.md
+  
+  - Gelişmiş Konular:
+    - advanced/index.md
+    - Performans Optimizasyonu: advanced/performance.md
+    - GPU Kullanımı: advanced/gpu.md
+    - Multiprocessing: advanced/multiprocessing.md
+    - Caching: advanced/caching.md
+    - Monitoring: advanced/monitoring.md
+    - Testing: advanced/testing.md
+  
+  - Katkıda Bulunma:
+    - contributing/index.md
+    - Geliştirme Ortamı: contributing/development.md
+    - Kod Standartları: contributing/code-standards.md
+    - Testing: contributing/testing.md
+    - Dokümantasyon: contributing/documentation.md
+    - Pull Request Süreci: contributing/pull-requests.md
+  
+  - Hakkında:
+    - about/index.md
+    - Lisans: about/license.md
+    - Değişiklik Günlüğü: about/changelog.md
+    - Roadmap: about/roadmap.md
+    - SSS: about/faq.md
+
+copyright: Copyright &copy; 2024 BNS Team

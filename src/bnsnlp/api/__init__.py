@@ -4,4 +4,6 @@ FastAPI service for bns-nlp-engine.
 This module provides REST API endpoints for all NLP operations.
 """
 
-__all__ = []
+from bnsnlp.api.service import app
+
+__all__ = ["app"]

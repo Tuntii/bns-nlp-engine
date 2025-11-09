@@ -5,4 +5,7 @@ This module provides Turkish-specific intent classification and
 named entity recognition capabilities.
 """
 
-__all__ = []
+from bnsnlp.classify.base import BaseClassifier, ClassifyResult, Entity
+from bnsnlp.classify.turkish import TurkishClassifier
+
+__all__ = ["BaseClassifier", "ClassifyResult", "Entity", "TurkishClassifier"]

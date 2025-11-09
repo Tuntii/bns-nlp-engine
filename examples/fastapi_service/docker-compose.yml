@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  # bns-nlp-engine API
+  api:
+    build: .
+    container_name: bnsnlp-api
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - BNSNLP_LOG_LEVEL=INFO
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    restart: unless-stopped
+    networks:
+      - bnsnlp-network
+  
+  # Qdrant vector database (optional)
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: bnsnlp-qdrant
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    restart: unless-stopped
+    networks:
+      - bnsnlp-network
+  
+  # Redis cache (optional)
+  redis:
+    image: redis:7-alpine
+    container_name: bnsnlp-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    networks:
+      - bnsnlp-network
+    command: redis-server --appendonly yes
+
+volumes:
+  qdrant_data:
+  redis_data:
+
+networks:
+  bnsnlp-network:
+    driver: bridge
