@@ -1,6 +1,6 @@
 # bns-nlp-engine
 
-[![CI](https://github.com/yourusername/bns-nlp-engine/workflows/CI/badge.svg)](https://github.com/yourusername/bns-nlp-engine/actions)
+[![CI](https://github.com/Tuntii/bns-nlp-engine/workflows/CI/badge.svg)](https://github.com/Tuntii/bns-nlp-engine/actions)
 [![PyPI version](https://badge.fury.io/py/bns-nlp-engine.svg)](https://badge.fury.io/py/bns-nlp-engine)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -64,7 +64,7 @@ pip install bns-nlp-engine[dev]
 ### Kaynak Koddan Kurulum
 
 ```bash
-git clone https://github.com/yourusername/bns-nlp-engine.git
+git clone https://github.com/Tuntii/bns-nlp-engine.git
 cd bns-nlp-engine
 pip install -e ".[dev,all]"
 ```
@@ -441,7 +441,7 @@ tox
 
 ```bash
 # Repository'yi clone'la
-git clone https://github.com/yourusername/bns-nlp-engine.git
+git clone https://github.com/Tuntii/bns-nlp-engine.git
 cd bns-nlp-engine
 
 # Geliştirme bağımlılıklarını yükle
@@ -512,7 +512,7 @@ Bu proje MIT Lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICE
 
 ## 📞 İletişim
 
-- GitHub Issues: [https://github.com/Tuntii/bns-nlp-engine/issues](https://github.com/yourusername/bns-nlp-engine/issues)
+- GitHub Issues: [https://github.com/Tuntii/bns-nlp-engine/issues](https://github.com/Tuntii/bns-nlp-engine/issues)
 - Email: tunay@bones.com.tr
 
 ## 🗺️ Roadmap
