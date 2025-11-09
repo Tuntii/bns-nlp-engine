@@ -9,7 +9,7 @@ from .base import BasePreprocessor, PreprocessResult
 from .lemmatizer import TurkishLemmatizer
 from .normalizer import TurkishNormalizer
 from .stopwords import StopWords
-from .tokenizer import Tokenizer
+from .tokenizer_advanced import AdvancedTokenizer
 
 
 class TurkishPreprocessor(BasePreprocessor):
@@ -45,7 +45,15 @@ class TurkishPreprocessor(BasePreprocessor):
 
         # Initialize components
         self.normalizer = TurkishNormalizer()
-        self.tokenizer = Tokenizer()
+        # Use AdvancedTokenizer in simple mode (all features disabled)
+        self.tokenizer = AdvancedTokenizer(
+            preserve_case=False,
+            keep_urls=False,
+            keep_emails=False,
+            keep_numbers=True,
+            keep_emojis=False,
+            cache_size=0,  # No caching for basic mode
+        )
         self.stopwords = StopWords()
         self.lemmatizer = TurkishLemmatizer()
 
