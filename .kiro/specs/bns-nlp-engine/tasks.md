@@ -643,7 +643,9 @@
 
 
 
-  - [-] 17.4 Write user guide pages
+  - [x] 17.4 Write user guide pages
+
+
 
     - Create guides for each module
 
@@ -658,7 +660,12 @@
     - Provide plugin examples
     - _Requirements: 6.6, 15.2_
 
-  - [ ] 17.6 Create example Jupyter notebooks
+  - [x] 17.6 Create example Jupyter notebooks
+
+
+
+
+
     - Quickstart notebook
     - Preprocessing examples
     - Embeddings and search examples
@@ -671,26 +678,37 @@
     - _Requirements: 15.4_
 
 
-- [ ] 18. Integration and final wiring
-  - [ ] 18.1 Wire all modules into main package __init__.py
+- [-] 18. Integration and final wiring
+
+
+  - [x] 18.1 Wire all modules into main package __init__.py
+
+
     - Export public API
     - Set __version__ attribute
     - _Requirements: 1.5, 19.4, 19.5_
 
-  - [ ] 18.2 Create default configuration files
+  - [x] 18.2 Create default configuration files
+
+
     - Create example config.yaml
     - Create .env.example
     - _Requirements: 8.1, 8.2_
 
-  - [ ] 18.3 Register all plugins in pyproject.toml entry_points
+  - [x] 18.3 Register all plugins in pyproject.toml entry_points
+
+
     - Verify all entry points are correctly configured
     - _Requirements: 6.2_
 
-  - [ ] 18.4 Create py.typed marker file
+  - [x] 18.4 Create py.typed marker file
+
+
     - Add py.typed for type information distribution
     - _Requirements: 9.4_
 
-  - [ ] 18.5 Verify package installation and imports
+  - [-] 18.5 Verify package installation and imports
+
     - Test pip install in clean environment
     - Verify all imports work correctly
     - Test CLI command availability

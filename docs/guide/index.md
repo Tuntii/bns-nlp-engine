@@ -10,13 +10,7 @@ bns-nlp-engine'i kullanarak Türkçe NLP işlemlerini nasıl gerçekleştireceğ
 - **[Embedding Oluşturma](embeddings.md)**: Metinleri vektörlere dönüştürün
 - **[Semantik Arama](search.md)**: Vector database'lerde semantik arama yapın
 - **[Sınıflandırma](classification.md)**: Intent ve entity extraction
-
-### İleri Seviye Konular
-
 - **[Pipeline Kullanımı](pipeline.md)**: İşlem adımlarını zincirleyin
-- **[Batch İşleme](batch-processing.md)**: Büyük veri setlerini verimli işleyin
-- **[Streaming](streaming.md)**: Gerçek zamanlı veri işleme
-- **[Hata Yönetimi](error-handling.md)**: Exception'ları yakalayın ve işleyin
 
 ## Hızlı Başlangıç
 

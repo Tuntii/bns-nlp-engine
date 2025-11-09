@@ -65,7 +65,7 @@ all = ["bns-nlp-engine[openai,cohere,huggingface,qdrant,pinecone,faiss,api]"]
 bnsnlp = "bnsnlp.cli.main:app"
 
 [project.entry-points."bnsnlp.preprocess"]
-turkish = "bnsnlp.preprocess.normalizer:TurkishPreprocessor"
+turkish = "bnsnlp.preprocess.turkish:TurkishPreprocessor"
 
 [project.entry-points."bnsnlp.embed"]
 openai = "bnsnlp.embed.openai:OpenAIEmbedder"
@@ -78,7 +78,7 @@ pinecone = "bnsnlp.search.pinecone:PineconeSearch"
 faiss = "bnsnlp.search.faiss:FAISSSearch"
 
 [project.entry-points."bnsnlp.classify"]
-turkish = "bnsnlp.classify.intent:TurkishClassifier"
+turkish = "bnsnlp.classify.turkish:TurkishClassifier"
 
 [tool.setuptools.packages.find]
 where = ["src"]
