@@ -1,2 +1,5 @@
 .kiro
 .github
+.ruff_cache
+.dist
+.htmlcov
