@@ -1,8 +1,8 @@
 site_name: bns-nlp-engine Documentation
 site_description: Türkçe NLP için modüler ve genişletilebilir Python kütüphanesi
 site_author: BNS Team
-site_url: https://yourusername.github.io/bns-nlp-engine
-repo_url: https://github.com/yourusername/bns-nlp-engine
+site_url: https://tuntii.github.io/bns-nlp-engine
+repo_url: https://github.com/Tuntii/bns-nlp-engine
 repo_name: bns-nlp-engine
 edit_uri: edit/main/docs/
 
